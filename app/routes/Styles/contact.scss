@@ -1,0 +1,220 @@
+@import "../../variables";
+
+.contactPage {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding: 0 30px;
+    max-width: 1300px;
+    min-height: 100vh;
+    height: fit-content;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: $background;
+
+    .header {
+        width: 100%;
+        display: flex;
+        padding: 75px 0 0 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+
+        .text {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            @media (max-width: 1200px) {
+                width: 100%;
+            }
+
+            .title {
+                margin-top: 0;
+                font-size: 36px;
+
+                @media (max-width: 1200px) {
+                    font-size: 32px;
+                }
+
+                @media (max-width: 600px) {
+                    font-size: 28px;
+                }
+
+                h1 {
+                    margin: 0;
+                    color: $text;
+                    line-height: 1em;
+                }
+
+                span {
+                    background: linear-gradient(to right, $primary, $accent);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                }
+            }
+
+            .byline {
+                margin-top: 0.5em;
+                color: $greyText;
+                font-size: 22px;
+    
+                @media (max-width: 600px) {
+                    font-size: 19px;
+                }
+            }
+
+            .form {
+                gap: 1em;
+                width: 100%;
+                display: flex;
+                margin-top: 1em;
+                flex-direction: column;
+
+                input, textarea {
+                    color: $text;
+                    outline: none;
+                    font-size: 16px;
+                    font-weight: 600;
+                    border-radius: 5px;
+                    padding: 10px 15px;
+                    transition: all 0.5s ease;
+                    border: 1px solid $greyText;
+                    font-family: "Inter", sans-serif;
+                    background-color: lighten($greyText, 70%);
+                }
+
+                textarea {
+                    resize: none;
+                    height: 40px;
+
+                    &:focus {
+                        height: 100px;
+                    }
+                }
+
+                .submitBtn {
+                    border: none;
+                    font-size: 18px;
+                    font-weight: 600;
+                    text-align: center;
+                    border-radius: 5px;
+                    padding: 10px 15px;
+                    text-decoration: none;
+                    box-sizing: border-box;
+                    transition: all 0.5s ease;
+
+                    color: $background;
+                    background-color: $primary;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.01);
+                        box-shadow: 0 2px 15px rgba($primary, 0.7);
+                    }
+
+                    @media (max-width: 800px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .photo {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+    
+            @media (max-width: 1200px) {
+                width: 100%;
+                margin-top: 3em;
+                justify-content: center;
+            }
+    
+            .wrapper {
+                width: 425px;
+                height: 425px;
+                display: flex;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $primary;
+    
+                @media (max-width: 1200px) {
+                    width: 600px;
+                    height: 600px;
+                }
+        
+                @media (max-width: 800px) {
+                    width: 80vw;
+                    height: 80vw;
+                    max-width: 320px;
+                    max-height: 320px;
+                }
+    
+                img {
+                    width: 80%;
+                    height: 80%;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .alsoCheck {
+        width: 100%;
+        padding-top: 40px;
+
+        h2 {
+            span {
+                background: linear-gradient(to right, $primary, $accent);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+        
+        .socials {
+            gap: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .social {
+                gap: 0.5em;
+                color: $text;
+                display: flex;
+                font-size: 20px;
+                font-weight: 500;
+                flex-direction: row;
+                align-items: center;
+                text-decoration: none;
+                justify-content: center;
+
+                .iconWrap {
+                    padding: 5px;
+                    display: flex;
+                    font-size: 25px;
+                    border-radius: 50%;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid $text;
+                }
+
+                p {
+                    color: $greyText;
+                }
+            }
+        }
+    }
+}

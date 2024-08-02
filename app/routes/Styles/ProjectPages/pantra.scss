@@ -1,0 +1,240 @@
+@import "../../../variables";
+
+.projectPantra {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding: 0 30px;
+    max-width: 1300px;
+    min-height: 100vh;
+    height: fit-content;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: $background;
+
+    .projectWrap {
+        width: 100%;
+        padding: 75px 0 0 0;
+
+        .header {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .sectionTitle {
+                color: $text;
+                margin-top: 0;
+                font-size: 48px;
+                margin-bottom: 0em;
+        
+                span {
+                    background: linear-gradient(to right, $primary, $accent);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                }
+            }
+
+            .date {
+                font-size: 20px;
+                font-weight: 600;
+                color: lighten($greyText, 20%);
+            }
+
+            .viewBtn {
+                font-size: 14px;
+                font-weight: 600;
+                margin-top: 0.5em;
+                color: $background;
+                text-align: center;
+                border-radius: 5px;
+                padding: 7.5px 10px;
+                text-decoration: none;
+                box-sizing: border-box;
+                transition: all 0.5s ease;
+                background-color: $primary;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.01);
+                    box-shadow: 0 2px 15px rgba($primary, 0.7);
+                }
+            }
+
+            .desc {
+                margin-top: 0.5em;
+                color: $greyText;
+                font-size: 22px;
+
+                @media (max-width: 600px) {
+                    font-size: 19px;
+                }
+            }
+    
+            .coverImg {
+                width: 100%;
+                padding-top: 40%;
+                margin-top: 30px;
+                position: relative;
+                border-radius: 5px;
+    
+                img {
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    border-radius: 20px;
+                    object-position: center;
+                }
+            }
+        }
+
+        .content {
+            padding-top: 40px;
+
+            .sec {
+                padding-top: 40px;
+
+                &:first-of-type {
+                    padding-top: 0;
+                }
+
+                .title {
+                    color: $text;
+                    margin-top: 0;
+                    font-size: 48px;
+                    margin-bottom: 0.5em;
+            
+                    span {
+                        background: linear-gradient(to right, $primary, $accent);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                }
+
+                p {
+                    margin-top: 1em;
+                    font-size: 18px;
+                    color: $greyText;
+
+                    &:first-of-type {
+                        margin: 0;
+                    }
+
+                    span {
+                        font-weight: 600;
+
+                        background: linear-gradient(to right, $primary, $accent);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+
+        .mediaSec {
+            width: 100%;
+            padding-top: 40px;
+
+            .title {
+                color: $text;
+                margin-top: 0;
+                font-size: 48px;
+                margin-bottom: 0.5em;
+        
+                span {
+                    background: linear-gradient(to right, $primary, $accent);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                }
+            }
+        }
+
+        .images {
+            gap: 1em;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            .imageCard {
+                width: 30%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                @media (max-width: 1000px) {
+                    width: 45%;
+                }
+    
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+
+                .imageWrap {
+                    width: 100%;
+                    overflow: hidden;
+                    padding-top: 50%;
+                    position: relative;
+                    border-radius: 10px;
+
+                    &:hover {
+                        i {
+                            opacity: 1;
+                            color: $background;
+                            transition: all 0.5s ease;
+                            background-color: $primary;
+                        }
+                    }
+
+                    i {
+                        top: 10px;
+                        opacity: 0;
+                        right: 10px;
+                        z-index: 10;
+                        color: $primary;
+                        font-size: 25px;
+                        position: absolute;
+                        border-radius: 50%;
+                        transform: rotate(-45deg);
+                        border: 2px solid $primary;
+                    }
+
+                    img {
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute;
+                        border-radius: 10px;
+                        object-position: center;
+                        transition: all 0.5s ease;
+
+                        &:hover {
+                            transform: scale(1.15) rotate(-5deg);
+                        }
+                    }
+                }
+
+                p {
+                    margin-top: 1em;
+                    font-size: 18px;
+                    color: $greyText;
+                }
+            }
+        }
+    }
+}

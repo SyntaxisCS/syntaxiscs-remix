@@ -1,0 +1,14 @@
+@import "../../variables";
+
+.aboutPage {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding: 0 30px;
+    max-width: 1300px;
+    min-height: 100vh;
+    height: fit-content;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: $background;
+}

@@ -1,0 +1,116 @@
+@import "../../../variables";
+
+.discordBots {
+    width: 100%;
+    padding: 40px 0 0 0;
+
+    .sectionTitle {
+        color: $text;
+        margin-top: 0;
+        font-size: 48px;
+        margin-bottom: 0.5em;
+
+        span {
+            background: linear-gradient(to right, $primary, $accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+
+    .subtitle {
+        margin-top: 0.5em;
+        color: $greyText;
+        font-size: 22px;
+
+        @media (max-width: 600px) {
+            font-size: 19px;
+        }
+    }
+
+    .list {
+        gap: 1em;
+        width: 100%;
+        display: flex;
+        margin-top: 1em;
+        flex-direction: column;
+
+        .bot {
+            display: flex;
+            flex-direction: column;
+
+            .mainRow {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .left {
+                    gap: 0.5em;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .pfp {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+
+                    a {
+                        gap: 0.5em;
+                        display: flex;
+                        flex-direction: row;
+                        text-decoration: none;
+
+                        &:hover {
+                            .name {
+                                color: lighten($greyText, 15%);
+                            }
+
+                            i {
+                                color: $background;
+                                background-color: $primary;
+                            }
+                        }
+                    }
+
+                    .name {
+                        font-size: 20px;
+                        color: $greyText;
+                        font-weight: 600;
+                    }
+
+                    i {
+                        color: $primary;
+                        font-size: 20px;
+                        border-radius: 50%;
+                        transform: rotate(-45deg);
+                        border: 1px solid $primary;
+                        transition: all 0.5s ease;
+                    }
+                }
+
+                .right {
+                    .date {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: lighten($greyText, 20%);
+                    }
+                }
+            }
+
+            .description {
+                font-size: 18px;
+                transition: all 0.5s ease;
+                margin: 0.5em 3.25em 0 3.25em;
+
+                @media (max-width: 800px) {
+                    margin: 0.5em 0 0 0;
+                }
+            }
+        }
+    }
+}

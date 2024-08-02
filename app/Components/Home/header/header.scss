@@ -1,0 +1,160 @@
+@import "../../../variables";
+
+.header {
+    width: 100%;
+    display: flex;
+    padding: 75px 0 0 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+    }
+
+    .text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
+
+        .greeting {
+            color: $greyText;
+            font-size: 25px;
+            font-weight: 500;
+
+            @media (max-width: 1200px) {
+                font-size: 23px;
+            }
+
+            @media (max-width: 600px) {
+                font-size: 22px;
+            }
+        }
+
+        .position {
+            margin-top: 0;
+            font-size: 48px;
+
+            @media (max-width: 1200px) {
+                font-size: 36px;
+            }
+
+            @media (max-width: 600px) {
+                font-size: 30px;
+            }
+
+            h1 {
+                margin: 0;
+                color: $text;
+                line-height: 1em;
+            }
+
+            span {
+                background: linear-gradient(to right, $primary, $accent);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+
+        .byline {
+            margin-top: 0.5em;
+            color: $greyText;
+            font-size: 22px;
+
+            @media (max-width: 600px) {
+                font-size: 19px;
+            }
+        }
+
+        .buttons {
+            gap: 1em;
+            display: flex;
+            margin-top: 1em;
+            flex-direction: row;
+            text-decoration: none;
+
+            .contact, .project {
+                font-size: 18px;
+                font-weight: 600;
+                text-align: center;
+                border-radius: 5px;
+                padding: 10px 15px;
+                text-decoration: none;
+                box-sizing: border-box;
+                transition: all 0.5s ease;
+
+                @media (max-width: 800px) {
+                    font-size: 14px;
+                }
+            }
+
+            .contact {
+                color: $background;
+                background-color: $primary;
+
+                &:hover {
+                    background-color: darken($primary, 5%);
+                }
+            }
+
+            .project {
+                color: $text;
+                background: none;
+                border: 1px solid $text;
+
+                &:hover {
+                    color: $background;
+                    background: $text;
+                }
+            }
+        }
+    }
+
+    .photo {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @media (max-width: 1200px) {
+            width: 100%;
+            margin-top: 3em;
+            justify-content: center;
+        }
+
+        .wrapper {
+            width: 425px;
+            height: 425px;
+            display: flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $primary;
+
+            @media (max-width: 1200px) {
+                width: 600px;
+                height: 600px;
+            }
+    
+            @media (max-width: 800px) {
+                width: 80vw;
+                height: 80vw;
+                max-width: 320px;
+                max-height: 320px;
+            }
+
+            img {
+                width: 80%;
+                height: 80%;
+                border-radius: 50%;
+            }
+        }
+    }
+}

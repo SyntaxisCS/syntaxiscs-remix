@@ -1,0 +1,43 @@
+@import "../../variables";
+
+.story {
+    width: 100%;
+    padding: 40px 0 0 0;
+
+    .sectionTitle {
+        color: $text;
+        margin-top: 0;
+        font-size: 48px;
+        margin-bottom: 0.5em;
+
+        span {
+            background: linear-gradient(to right, $primary, $accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+
+    .storyWrap {
+        gap: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        p {
+            font-size: 18px;
+            color: $greyText;
+
+            span {
+                font-weight: 600;
+
+                background: linear-gradient(to right, $primary, $accent);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+    }
+}

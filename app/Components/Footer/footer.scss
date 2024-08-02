@@ -1,0 +1,104 @@
+@import "../../variables";
+
+footer {
+    display: flex;
+    padding-top: 40px;
+    margin-bottom: 2em;
+    flex-direction: column;
+
+    .lowerBar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 625px) {
+            gap: 1em;
+            flex-direction: column;
+        }
+
+        .contact {
+            p {
+                font-size: 22px;
+                color: $greyText;
+                font-weight: 600;
+
+                span {
+                    font-weight: 600;
+                    background: linear-gradient(to right, $primary, $accent);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                }
+            }
+
+            .buttons {
+                gap: 1em;
+                display: flex;
+                margin-top: 1em;
+                flex-direction: row;
+                text-decoration: none;
+
+                @media (max-width: 625px) {
+                    align-items: center;
+                    justify-content: center;
+                }
+    
+                .contact, .project {
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-align: center;
+                    border-radius: 5px;
+                    padding: 7.5px 10px;
+                    text-decoration: none;
+                    box-sizing: border-box;
+                    transition: all 0.5s ease;
+                }
+    
+                .contact {
+                    color: $background;
+                    background-color: $primary;
+    
+                    &:hover {
+                        background-color: darken($primary, 5%);
+                    }
+                }
+    
+                .project {
+                    color: $text;
+                    background: none;
+                    border: 1px solid $text;
+    
+                    &:hover {
+                        color: $background;
+                        background: $text;
+                    }
+                }
+            }
+        }
+
+        .signature {
+            display: flex;
+            font-size: 16px;
+            color: $greyText;
+            margin-top: 0.5em;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: flex-end;
+            
+            p {
+                width: fit-content;
+            }
+
+            span {
+                font-weight: 600;
+                background: linear-gradient(to right, $primary, $accent);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+    }
+}

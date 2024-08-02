@@ -1,0 +1,60 @@
+@import "../../../variables";
+
+.skills {
+    width: 100%;
+    padding: 75px 0 0 0;
+
+    .sectionTitle {
+        color: $text;
+        margin-top: 0;
+        font-size: 48px;
+        margin-bottom: 0.5em;
+
+        span {
+            background: linear-gradient(to right, $primary, $accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+
+    .skillWrapper {
+        gap: 1em;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+
+        .skillItem {
+            width: 24%;
+            color: $text;
+            display: flex;
+            height: 150px;
+            box-sizing: border-box;
+            flex-direction: column;
+
+            @media (max-width: 1260px) {
+                width: 45%;
+            }
+
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+
+            .title {
+                margin: 0;
+                font-size: 22px;
+                font-weight: 700;
+                margin-bottom: 0.5em;
+            }
+
+            .skillList {
+                font-size: 18px;
+                color: $greyText;
+            }
+        }
+    }
+}
