@@ -99,7 +99,13 @@ export const links = () => {
         // Boxicons
         { rel: "stylesheet", href: "https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"}
     ]
-}
+};
+
+export const scripts = () => {
+    return [
+        { src: "https://cdn.usefathom.com/script.js", "data-site": "JMHSJMLY", defer: true}
+    ]
+};
 
 export const ErrorBoundary = () => {
     const error = useRouteError();
