@@ -14,6 +14,9 @@ import { useEffect, useRef } from "react";
 import LoadingBar from "react-top-loading-bar";
 import "./index.scss";
 
+// Utils
+import Fathom from "./Utils/fathom";
+
 export const meta = () => {
     return [
         { title: "SyntaxisCS" },
@@ -101,12 +104,6 @@ export const links = () => {
     ]
 };
 
-export const scripts = () => {
-    return [
-        { src: "https://cdn.usefathom.com/script.js", "data-site": "JMHSJMLY", defer: true}
-    ]
-};
-
 export const ErrorBoundary = () => {
     const error = useRouteError();
 
@@ -144,6 +141,7 @@ export const ErrorBoundary = () => {
 
                 <ScrollRestoration/>
                 <Scripts/>
+                <Fathom/>
             </body>
             </html>
         )
@@ -180,6 +178,7 @@ export default function App() {
                     <Outlet/>
                     <ScrollRestoration/>
                     <Scripts/>
+                    <Fathom/>
                 </div>
             </body>
         </html>
