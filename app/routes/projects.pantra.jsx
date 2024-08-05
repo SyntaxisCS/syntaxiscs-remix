@@ -115,7 +115,7 @@ export default function PantraPage() {
 
                     <p className="desc">A pantry contents tracker. Served as a introduction into desktop apps with Electron.js!</p>
 
-                    <div className="coverImg"><img src="/assets/projects/playvessel/meta-share.jpg"/></div>
+                    <div className="coverImg"><img src="/assets/projects/pantra/pantra.png"/></div>
                 </div>
 
                 <div className="content">
