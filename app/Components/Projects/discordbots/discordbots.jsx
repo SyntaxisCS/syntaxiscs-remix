@@ -13,8 +13,8 @@ export default function DiscordBots () {
                 <div className="bot">
                     <div className="mainRow">
                         <div className="left">
-                            <img className="pfp" src="assets/projects/discordbots/icebot.png"/>
-                            <a href="https://gitlab.com/SyntaxisCS/Icebot" target="_blank">
+                            <img className="pfp" src="assets/projects/discordbots/icebot.png" alt="Icebot logo"/>
+                            <a href="https://gitlab.com/SyntaxisCS/Icebot" target="_blank" aria-label="Icebot Gitlab Repo link">
                                 <p className="name">Icebot</p>
                                 <i className="bx bx-right-arrow-alt"/>
                             </a>
@@ -30,8 +30,8 @@ export default function DiscordBots () {
                 <div className="bot">
                     <div className="mainRow">
                         <div className="left">
-                            <img className="pfp" src="assets/projects/discordbots/capitalist.png"/>
-                            <a href="https://gitlab.com/SyntaxisCS/Capitalist" target="_blank">
+                            <img className="pfp" src="assets/projects/discordbots/capitalist.png" alt="Capitalist logo"/>
+                            <a href="https://gitlab.com/SyntaxisCS/Capitalist" target="_blank" aria-label="Capitalist Gitlab Repo link">
                                 <p className="name">Capitalist</p>
                                 <i className="bx bx-right-arrow-alt"/>
                             </a>
@@ -47,7 +47,7 @@ export default function DiscordBots () {
                 <div className="bot">
                     <div className="mainRow">
                         <div className="left">
-                            <img className="pfp" src="assets/projects/discordbots/quizmaster.png"/>
+                            <img className="pfp" src="assets/projects/discordbots/quizmaster.png" alt="Quizmaster logo"/>
                             <p className="name">Quizmaster</p>
                         </div>
                         <div className="right">

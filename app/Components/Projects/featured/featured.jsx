@@ -13,15 +13,15 @@ export default function Featured() {
 
             <div className="projects">
                 <div className="project">
-                    <img src="assets/projects/playvessel/meta-share.jpg"/>
+                    <img src="assets/projects/playvessel/meta-share.jpg" alt="PlayVessel meta image"/>
 
                     <div className="text">
                         <NavLink to="/projects/playvessel" className="title">PlayVessel <i className="bx bx-right-arrow-alt"/></NavLink>
-                        <p>A game backlog tracker, with a complex backend handling nearly 300k video game entries. This is my current main pronject.</p>
+                        <p>A game backlog tracker, with a complex backend handling nearly 300k video game entries. This is my current main project.</p>
                     </div>
                 </div>
                 <div className="project">
-                    <img src="assets/projects/pantra/pantra.png"/>
+                    <img src="assets/projects/pantra/pantra.png" alt="Pantra Logo"/>
 
                     <div className="text">
                         <NavLink to="/projects/pantra" className="title">Pantra <i className="bx bx-right-arrow-alt"/></NavLink>

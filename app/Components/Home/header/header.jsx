@@ -28,7 +28,7 @@ export default function Header () {
 
             <div className="photo">
                 <div className="wrapper">
-                    <img src="/sakura.png"/>
+                    <img src="/sakura.webp" alt="SyntaxisCS Profile Picture"/>
                 </div>
             </div>
         </div>

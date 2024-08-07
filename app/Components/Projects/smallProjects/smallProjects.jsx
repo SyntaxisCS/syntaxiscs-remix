@@ -13,8 +13,8 @@ export default function SmallProjects () {
                 <div className="project">
                     <div className="mainRow">
                         <div className="left">
-                            <img className="pfp" src="/assets/projects/parkingGarage.png"/>
-                            <a href="https://gitlab.com/SyntaxisCS/ParkingGarage" target="_blank">
+                            <img className="pfp" src="/assets/projects/parkingGarage.png" alt="Parking Garage icon"/>
+                            <a href="https://gitlab.com/SyntaxisCS/ParkingGarage" target="_blank" aria-label="ParkingGarage Gitlab repo link">
                                 <p className="name">ParkingGarage</p>
                                 <i className="bx bx-right-arrow-alt"/>
                             </a>
@@ -31,8 +31,8 @@ export default function SmallProjects () {
                 <div className="project">
                     <div className="mainRow">
                         <div className="left">
-                            <img className="pfp" src="/assets/projects/passwordLeakChecker.png"/>
-                            <a href="https://gitlab.com/SyntaxisCS/password-leak-check" target="_blank">
+                            <img className="pfp" src="/assets/projects/passwordLeakChecker.png" alt="password leak checker icon"/>
+                            <a href="https://gitlab.com/SyntaxisCS/password-leak-check" target="_blank" aria-label="password-leak-check Gitlab repo link">
                                 <p className="name">Password-Leak-Checker</p>
                                 <i className="bx bx-right-arrow-alt"/>
                             </a>
@@ -49,8 +49,8 @@ export default function SmallProjects () {
                 <div className="project">
                     <div className="mainRow">
                         <div className="left">
-                            <img className="pfp" src="/assets/projects/turtleHandler.png"/>
-                            <a href="https://gitlab.com/SyntaxisCS/turtle-handler" target="_blank">
+                            <img className="pfp" src="/assets/projects/turtleHandler.png" alt="turtle-handler icon"/>
+                            <a href="https://gitlab.com/SyntaxisCS/turtle-handler" target="_blank" aria-label="turtle-handler Gitlab repo link">
                                 <p className="name">Turtle-Handler</p>
                                 <i className="bx bx-right-arrow-alt"/>
                             </a>

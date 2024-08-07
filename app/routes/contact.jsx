@@ -108,7 +108,7 @@ export default function Contact() {
 
                 <div className="photo">
                     <div className="wrapper">
-                        <img src="/sakura.png"/>
+                        <img src="/sakura.webp" alt="SyntaxisCS Profile Picture"/>
                     </div>
                 </div>
             </div>
@@ -117,21 +117,21 @@ export default function Contact() {
                 <h2>You can also find me on<span>:</span></h2>
 
                 <div className="socials">
-                    <a className="social" href="https://gitlab.com/SyntaxisCS" target="_blank">
+                    <a className="social" href="https://gitlab.com/SyntaxisCS" target="_blank" aria-label="SyntaxisCS Gitlab">
                         <div className="iconWrap">
                             <i className="bx bxl-gitlab"/>
                         </div>
                         <p>SyntaxisCS</p>
                     </a>
 
-                    <a className="social" href="https://github.com/SyntaxisCS" target="_blank">
+                    <a className="social" href="https://github.com/SyntaxisCS" target="_blank" aria-label="SyntaxisCS Github">
                         <div className="iconWrap">
                             <i className="bx bxl-github"/>
                         </div>
                         <p>SyntaxisCS</p>
                     </a>
 
-                    <a className="social" href="https://www.linkedin.com/in/charlesstello/" target="_blank">
+                    <a className="social" href="https://www.linkedin.com/in/charlesstello/" target="_blank" aria-label="Charles Stello LinkedIn">
                         <div className="iconWrap">
                             <i className="bx bxl-linkedin"/>
                         </div>

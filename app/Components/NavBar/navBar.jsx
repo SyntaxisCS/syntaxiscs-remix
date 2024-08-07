@@ -26,15 +26,15 @@ export default function NavBar ({active}) {
                 <NavLink to="/about" className={`item ${active === "about" ? "active" : ""}`}>About</NavLink>
             </div>
 
-            <NavLink to="/contact" className="contactBtn">
+            <NavLink to="/contact" className="contactBtn" aria-label="Contact">
                 <i className="bx bx-message-rounded-detail"/>
             </NavLink>
 
             <div className="menuBar">
                 {showMenu ?
-                    <i className="bx bx-menu-alt-right" onClick={toggleMenu}/>
+                    <i className="bx bx-menu-alt-right" onClick={toggleMenu} aria-label="Close Menu"/>
                 :
-                    <i className="bx bx-menu" onClick={toggleMenu}/>
+                    <i className="bx bx-menu" onClick={toggleMenu} aria-label="Open Menu"/>
                 }
 
                 {showMenu && (

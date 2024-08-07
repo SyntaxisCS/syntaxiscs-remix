@@ -115,7 +115,7 @@ export default function PlayVesselPage() {
 
                     <p className="desc">Gaming backlog tracker. Sort games into categories to chip through the dreaded gaming backlog!</p>
 
-                    <div className="coverImg"><img src="/assets/projects/playvessel/meta-share.jpg"/></div>
+                    <div className="coverImg"><img src="/assets/projects/playvessel/meta-share.jpg" alt="PlayVessel Cover Image"/></div>
                 </div>
 
                 <div className="content">
@@ -143,7 +143,7 @@ export default function PlayVesselPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/profile.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/profile.webp"/>
+                                <img src="/assets/projects/playvessel/profile.webp" alt="Profile Home"/>
                             </div>
                             <p>Profile Home</p>
                         </div>
@@ -151,7 +151,7 @@ export default function PlayVesselPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/profileBacklog.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/profileBacklog.webp"/>
+                                <img src="/assets/projects/playvessel/profileBacklog.webp" alt="Profile Backlog"/>
                             </div>
                             <p>Profile Backlog</p>
                         </div>
@@ -159,7 +159,7 @@ export default function PlayVesselPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/gameDetail.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/gameDetail.webp"/>
+                                <img src="/assets/projects/playvessel/gameDetail.webp" alt="Game Detail Page (IMG1)"/>
                             </div>
                             <p>Game Detail Page</p>
                         </div>
@@ -167,7 +167,7 @@ export default function PlayVesselPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/gameDetail-2.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/gameDetail-2.webp"/>
+                                <img src="/assets/projects/playvessel/gameDetail-2.webp" alt="Game Detail Page (IMG2)"/>
                             </div>
                             <p>Game Detail Page (Cont.)</p>
                         </div>
@@ -175,7 +175,7 @@ export default function PlayVesselPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/settingsHome.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/settingsHome.webp"/>
+                                <img src="/assets/projects/playvessel/settingsHome.webp" alt="Settings Home"/>
                             </div>
                             <p>Settings Home</p>
                         </div>
@@ -183,7 +183,7 @@ export default function PlayVesselPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/settingsPrivacy.webp")}>    
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/settingsPrivacy.webp"/>
+                                <img src="/assets/projects/playvessel/settingsPrivacy.webp" alt="Privacy Disclosure"/>
                             </div>
                             <p>Privacy Disclosure</p>
                         </div>
@@ -191,7 +191,7 @@ export default function PlayVesselPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/pvAbout.webp")}> 
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/pvAbout.webp"/>
+                                <img src="/assets/projects/playvessel/pvAbout.webp" alt="About Page"/>
                             </div>
                             <p>About Page</p>
                         </div>
@@ -199,7 +199,7 @@ export default function PlayVesselPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/elp.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/elp.webp"/>
+                                <img src="/assets/projects/playvessel/elp.webp" alt="External Link Protection Page (ELP)"/>
                             </div>
                             <p>External Link Protection Page (ELP)</p>
                         </div>
@@ -207,7 +207,7 @@ export default function PlayVesselPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/footer.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/footer.webp"/>
+                                <img src="/assets/projects/playvessel/footer.webp" alt="Footer"/>
                             </div>
                             <p>Footer</p>
                         </div>
@@ -215,7 +215,7 @@ export default function PlayVesselPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/statusPage.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/statusPage.webp"/>
+                                <img src="/assets/projects/playvessel/statusPage.webp" alt="Instatus Status Page"/>
                             </div>
                             <p>Instatus Status Page</p>
                         </div>

@@ -115,7 +115,7 @@ export default function PantraPage() {
 
                     <p className="desc">A pantry contents tracker. Served as a introduction into desktop apps with Electron.js!</p>
 
-                    <div className="coverImg"><img src="/assets/projects/pantra/pantra.png"/></div>
+                    <div className="coverImg"><img src="/assets/projects/pantra/pantra.png" alt="Pantra Cover Image"/></div>
                 </div>
 
                 <div className="content">
@@ -142,7 +142,7 @@ export default function PantraPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/home.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/home.webp"/>
+                                <img src="/assets/projects/pantra/home.webp" alt="Home Page"/>
                             </div>
                             <p>Home Page</p>
                         </div>
@@ -150,7 +150,7 @@ export default function PantraPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/inPantry.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/inPantry.webp"/>
+                                <img src="/assets/projects/pantra/inPantry.webp" alt="Inside Pantry Category"/>
                             </div>
                             <p>Inside Pantry Category</p>
                         </div>
@@ -158,7 +158,7 @@ export default function PantraPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/shoppingLists.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/shoppingLists.webp"/>
+                                <img src="/assets/projects/pantra/shoppingLists.webp" alt="Shopping Lists Page"/>
                             </div>
                             <p>Shopping Lists Page</p>
                         </div>
@@ -166,7 +166,7 @@ export default function PantraPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/inShoppingList.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/inShoppingList.webp"/>
+                                <img src="/assets/projects/pantra/inShoppingList.webp" alt="Inside a Shopping List"/>
                             </div>
                             <p>Inside a Shopping List</p>
                         </div>
@@ -174,7 +174,7 @@ export default function PantraPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/settings.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/settings.webp"/>
+                                <img src="/assets/projects/pantra/settings.webp" alt="Settings Home Page"/>
                             </div>
                             <p>Settings Home Page</p>
                         </div>
@@ -182,7 +182,7 @@ export default function PantraPage() {
                         <div className="imageCard">
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/about.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/about.webp"/>
+                                <img src="/assets/projects/pantra/about.webp" alt="About Page (in settings)"/>
                             </div>
                             <p>About Page (in settings)</p>
                         </div>
