@@ -154,13 +154,9 @@ export default function App() {
     const ref = useRef();
 
     useEffect(() => {
-        if (transition.state === "loading") {
-            ref.current.continuousStart();
-        }
+        if (transition.state === "loading") ref.current.continuousStart();
 
-        if (transition.state === "idle") {
-            ref.current.complete();
-        }
+        if (transition.state === "idle") ref.current.complete();
     }, [transition.state]);
 
     return (

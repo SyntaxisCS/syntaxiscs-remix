@@ -109,9 +109,7 @@ export default function PlayVesselPage() {
             <div className="projectWrap">
                 <div className="header">
                     <h2 className="sectionTitle">PlayVessel<span>.</span></h2>
-                    <p className="date">July 2023 - Present</p>
-                    
-                    <a className="viewBtn" href="https://playvessel.com" target="_blank">Visit PlayVessel</a>
+                    <p className="date">July 2023 - October 2024</p>
 
                     <p className="desc">Gaming backlog tracker. Sort games into categories to chip through the dreaded gaming backlog!</p>
 
@@ -132,7 +130,7 @@ export default function PlayVesselPage() {
 
                     <div className="sec">
                         <h3 className="title">Aftermath<span>.</span></h3>
-                        <p>After working on PlayVessel for a year now as of writing I can confidently say that it's been my <span>best work</span> that I've ever done. I <span>learned so much</span> not just in coding the thing but how to <span>manage</span> a <span>website efficiently</span> as well as <span>servers</span> and <span>CDNs</span>. While I want nothing more than for PlayVessel to be my first website to achieve my goal of making just one person's life easier, I can confidently say even it if isn't I'm proud that I created it and I'd do it again. I plan to continue to work on it and maintain it for the foreseeable future.</p>
+                        <p>After working on PlayVessel for a year now as of writing I can confidently say that it's been my <span>best work</span> that I've ever done. I <span>learned so much</span> not just in coding the thing but how to <span>manage</span> a <span>website efficiently</span> as well as <span>servers</span> and <span>CDNs</span>. While I want nothing more than for PlayVessel to be my first website to achieve my goal of making just one person's life easier, I can confidently say even it if isn't I'm proud that I created it and I'd do it again.</p>
                     </div>
                 </div>
 

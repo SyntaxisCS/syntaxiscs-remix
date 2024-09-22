@@ -17,7 +17,7 @@ export default function Featured() {
 
                     <div className="text">
                         <NavLink to="/projects/playvessel" className="title">PlayVessel <i className="bx bx-right-arrow-alt"/></NavLink>
-                        <p>A game backlog tracker, with a complex backend handling nearly 300k video game entries. This is my current main project.</p>
+                        <p>A game backlog tracker, with a complex backend handling nearly 300k video game entries.</p>
                     </div>
                 </div>
                 <div className="project">
