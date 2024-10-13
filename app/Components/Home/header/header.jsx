@@ -4,12 +4,13 @@ import React from "react";
 import "./header.scss";
 
 // Utils
+import { m as motion} from "framer-motion";
 import { NavLink } from "@remix-run/react";
 
 export default function Header () {
     return (
         <div className="header">
-            <div className="text">
+            <motion.div className="text" initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
                 <div className="greeting">
                     <p>Hey, I'm Charley!</p>
                 </div>
@@ -24,13 +25,13 @@ export default function Header () {
                     <NavLink className="contact" to="/contact">Get In Touch</NavLink>
                     <NavLink className="project" to="/projects">View My Projects</NavLink>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="photo">
+            <motion.div className="photo" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
                 <div className="wrapper">
                     <img src="/sakura.webp" alt="SyntaxisCS Profile Picture"/>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 };
