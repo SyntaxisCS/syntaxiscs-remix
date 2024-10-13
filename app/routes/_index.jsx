@@ -3,6 +3,7 @@ import React from "react";
 // Components
 import NavBar from "../Components/NavBar/navBar";
 import Header from "../Components/Home/header/header";
+import AtomicityBanner from "../Components/Home/atomicityBanner/atomicityBanner";
 import Skills from "../Components/Home/skills/skills";
 import Story from "../Components/story/story";
 import Footer from "../Components/Footer/footer";
@@ -25,6 +26,8 @@ export default function Home() {
             <NavBar active="home"/>
 
             <Header/>
+
+            <AtomicityBanner/>
 
             <Skills/>
 
