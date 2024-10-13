@@ -16,6 +16,7 @@ import "./index.scss";
 
 // Utils
 import Fathom from "./Utils/fathom";
+import { LazyMotion, MotionConfig } from "framer-motion";
 
 export const meta = () => {
     return [
@@ -148,6 +149,8 @@ export const ErrorBoundary = () => {
     }
 };
 
+const loadFramer = () => import("./Utils/framer-anims").then(exp => exp.default);
+
 export default function App() {
     // Utils
     const transition = useNavigation();
@@ -171,7 +174,11 @@ export default function App() {
             <body>
                 <div id="root">
                     <LoadingBar color="#6e06f1" ref={ref}/>
-                    <Outlet/>
+                    <MotionConfig reducedMotion="user">
+                        <LazyMotion strict features={loadFramer}>
+                            <Outlet/>
+                        </LazyMotion>
+                    </MotionConfig>
                     <ScrollRestoration/>
                     <Scripts/>
                     <Fathom/>
