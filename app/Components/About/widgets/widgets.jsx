@@ -1,10 +1,13 @@
-import React from "react";
+import { useEffect } from "react";
 
 // Components
 import "./widgets.scss";
 
+// Utils
+import { m as motion } from "framer-motion";
+
 export default function AboutWidgets () {
-    React.useEffect(() => {
+    useEffect(() => {
         const scrollers = document.querySelectorAll('.stackScroller');
         scrollers.forEach(scroller => {
             const items = Array.from(scroller.children);
@@ -20,7 +23,14 @@ export default function AboutWidgets () {
             <div className="techStack">
                 <h2>Current Tech Stack<span>.</span></h2>
                 <div className="stackCard">
-                    <div className="stackScroller left">
+                    <motion.div className="stackScroller"
+                        animate={{ x: [0, -300] }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 10,
+                            ease: "linear"
+                        }}
+                    >
                         <i className="bx bx-star"/>
                         <div className="techItem">Node.js</div>
                         <i className="bx bx-star"/>
@@ -29,10 +39,18 @@ export default function AboutWidgets () {
                         <div className="techItem">HTML5/CSS3</div>
                         <i className="bx bx-star"/>
                         <div className="techItem">React.js</div>
-                    </div>
+                        <i className="bx bx-star"/>
+                        <div className="techItem">Framer Motion</div>
+                    </motion.div>
 
-                    <div className="stackScroller right">
-                        
+                    <motion.div className="stackScroller"
+                        animate={{ x: [-300, 0] }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 10,
+                            ease: "linear"
+                        }}
+                    >    
                         <i className="bx bx-star"/>
                         <div className="techItem">Remix.run</div>
                         <i className="bx bx-star"/>
@@ -43,9 +61,16 @@ export default function AboutWidgets () {
                         <div className="techItem">SASS</div>
                         <i className="bx bx-star"/>
                         <div className="techItem">Docker</div>
-                    </div>
+                    </motion.div>
 
-                    <div className="stackScroller left offset">
+                    <motion.div className="stackScroller"
+                        animate={{ x: [0, -300] }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 10,
+                            ease: "linear"
+                        }}
+                    >
                         <i className="bx bx-star"/>
                         <div className="techItem">PostgreSQL</div>
                         <i className="bx bx-star"/>
@@ -56,7 +81,7 @@ export default function AboutWidgets () {
                         <div className="techItem">Vercel</div>
                         <i className="bx bx-star"/>
                         <div className="techItem">Boxicons</div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

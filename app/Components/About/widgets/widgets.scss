@@ -40,28 +40,6 @@
                 flex-direction: row;
                 white-space: nowrap;
                 align-items: center;
-                animation: scroll 30s linear infinite;
-
-                &.right {
-                    animation-direction: reverse;
-                }
-
-                @media (max-width: 1260px) {
-                    animation: scroll 20s linear infinite;
-                }
-    
-                @media (max-width: 600px) {
-                    animation: scroll 10s linear infinite;
-                }
-
-                @keyframes scroll {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(-50%);
-                    }
-                }
 
                 i {
                     font-size: 25px;
