@@ -90,7 +90,6 @@ export const loader = async ({request}) => {
 export default function Contact() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "0px 0px -200px 0px"});
-    const contactIsInView = useInView(ref, { once: true, margin: "0px 0px -200px 0px"});
 
     const containerVariants = {
         hidden: { opacity: 1, scale: 0 },
@@ -120,12 +119,12 @@ export default function Contact() {
                     </div>
                     <p className="byline">Think I could help you out? Reach out through the form and I'll get back to you as soon as I can! I'm looking forward to meeting you!</p>
                     
-                    <motion.form className="form" action="https://formspree.io/f/xrgvrjdp" method="post" variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
-                        <motion.input variants={cardVariants} type="text" name="name" placeholder="name" required/>
-                        <motion.input variants={cardVariants} type="email" name="email" placeholder="email" required/>
-                        <motion.textarea variants={cardVariants} name="message" placeholder="message" required/>
-                        <motion.button variants={cardVariants} className="submitBtn">Send <i className="bx bx-paper-plane"/></motion.button>
-                    </motion.form>
+                    <form className="form" action="https://formspree.io/f/xrgvrjdp" method="post">
+                        <input type="text" name="name" placeholder="name" required/>
+                        <input type="email" name="email" placeholder="email" required/>
+                        <textarea name="message" placeholder="message" required/>
+                        <button className="submitBtn">Send <i className="bx bx-paper-plane"/></button>
+                    </form>
                 </motion.div>
 
                 <motion.div className="photo" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
@@ -138,7 +137,7 @@ export default function Contact() {
             <div className="alsoCheck">
                 <h2>You can also find me on<span>:</span></h2>
 
-                <motion.div className="socials" variants={containerVariants} initial="hidden" animate={contactIsInView ? "visible" : "hidden"}>
+                <motion.div className="socials" variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
                     <motion.a variants={cardVariants} className="social" href="https://gitlab.com/SyntaxisCS" target="_blank" aria-label="SyntaxisCS Gitlab">
                         <div className="iconWrap">
                             <i className="bx bxl-gitlab"/>
