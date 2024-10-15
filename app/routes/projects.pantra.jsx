@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef, useState } from "react";
 
 // Components
 import NavBar from "../Components/NavBar/navBar";
@@ -8,6 +8,7 @@ import "./Styles/ProjectPages/pantra.scss";
 
 // Utils
 import { json } from "@remix-run/react";
+import { m as motion, useInView } from "framer-motion";
 
 export const meta = () => {
     return [
@@ -88,9 +89,13 @@ export const loader = async ({request}) => {
 };
 
 export default function PantraPage() {
+    // Utils
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px"});
+
     // States
-    const [isImageModalOpen, setIsImageModalOpen] = React.useState(false);
-    const [selectedImage, setSelectedImage] = React.useState(null);
+    const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
 
     const openImageModal = (image) => {
         setSelectedImage(image);
@@ -102,21 +107,38 @@ export default function PantraPage() {
         setSelectedImage(null);
     };
 
+    const containerVariants = {
+        hidden: { opacity: 1, scale: 0 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.2
+            }
+        }
+    };
+    
+    const cardVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeInOut" } },
+    };
+
     return (
         <div className="projectPantra">
             <NavBar/>
 
             <div className="projectWrap">
-                <div className="header">
-                    <h2 className="sectionTitle">Pantra<span>.</span></h2>
-                    <p className="date">June 2023 - July 2023</p>
+                <motion.header className="header" variants={containerVariants} initial="hidden" animate="visible">
+                    <motion.h2 className="sectionTitle" variants={cardVariants}>Pantra<span>.</span></motion.h2>
+                    <motion.p className="date" variants={cardVariants}>June 2023 - July 2023</motion.p>
                     
-                    <a className="viewBtn" href="https://gitlab.com/SyntaxisCS/Pantra" target="_blank">View on Gitlab</a>
+                    <motion.a className="viewBtn" href="https://gitlab.com/SyntaxisCS/Pantra" target="_blank" variants={cardVariants}>View on Gitlab</motion.a>
 
-                    <p className="desc">A pantry contents tracker. Served as a introduction into desktop apps with Electron.js!</p>
+                    <motion.a className="desc" variants={cardVariants}>A pantry contents tracker. Served as a introduction into desktop apps with Electron.js!</motion.a>
 
-                    <div className="coverImg"><img src="/assets/projects/pantra/pantra.png" alt="Pantra Cover Image"/></div>
-                </div>
+                    <motion.div className="coverImg" variants={cardVariants}><img src="/assets/projects/pantra/pantra.png" alt="Pantra Cover Image" loading="lazy"/></motion.div>
+                </motion.header>
 
                 <div className="content">
                     <div className="sec">
@@ -135,58 +157,58 @@ export default function PantraPage() {
                     </div>
                 </div>
 
-                <div className="mediaSec">
+                <div className="mediaSec" ref={ref}>
                     <h3 className="title">Media<span>.</span></h3>
 
-                    <div className="images">
-                        <div className="imageCard">
+                    <motion.div className="images" variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/home.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/home.webp" alt="Home Page"/>
+                                <img src="/assets/projects/pantra/home.webp" alt="Home Page" loading="lazy"/>
                             </div>
                             <p>Home Page</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/inPantry.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/inPantry.webp" alt="Inside Pantry Category"/>
+                                <img src="/assets/projects/pantra/inPantry.webp" alt="Inside Pantry Category" loading="lazy"/>
                             </div>
                             <p>Inside Pantry Category</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/shoppingLists.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/shoppingLists.webp" alt="Shopping Lists Page"/>
+                                <img src="/assets/projects/pantra/shoppingLists.webp" alt="Shopping Lists Page" loading="lazy"/>
                             </div>
                             <p>Shopping Lists Page</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/inShoppingList.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/inShoppingList.webp" alt="Inside a Shopping List"/>
+                                <img src="/assets/projects/pantra/inShoppingList.webp" alt="Inside a Shopping List" loading="lazy"/>
                             </div>
                             <p>Inside a Shopping List</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/settings.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/settings.webp" alt="Settings Home Page"/>
+                                <img src="/assets/projects/pantra/settings.webp" alt="Settings Home Page" loading="lazy"/>
                             </div>
                             <p>Settings Home Page</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/pantra/about.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/pantra/about.webp" alt="About Page (in settings)"/>
+                                <img src="/assets/projects/pantra/about.webp" alt="About Page (in settings)" loading="lazy"/>
                             </div>
                             <p>About Page (in settings)</p>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
 
                 {selectedImage && (

@@ -1,4 +1,4 @@
-import React from "react";
+import {useRef, useState} from "react";
 
 // Components
 import NavBar from "../Components/NavBar/navBar";
@@ -8,6 +8,7 @@ import "./Styles/ProjectPages/playvessel.scss";
 
 // Utils
 import { json } from "@remix-run/react";
+import {m as motion, useInView} from "framer-motion";
 
 export const meta = () => {
     return [
@@ -88,9 +89,13 @@ export const loader = async ({request}) => {
 };
 
 export default function PlayVesselPage() {
+    // Utils
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px"});
+
     // States
-    const [isImageModalOpen, setIsImageModalOpen] = React.useState(false);
-    const [selectedImage, setSelectedImage] = React.useState(null);
+    const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
 
     const openImageModal = (image) => {
         setSelectedImage(image);
@@ -102,19 +107,36 @@ export default function PlayVesselPage() {
         setSelectedImage(null);
     };
 
+    const containerVariants = {
+        hidden: { opacity: 1, scale: 0 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.2
+            }
+        }
+    };
+    
+    const cardVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeInOut" } },
+    };
+
     return (
         <div className="projectPlayvessel">
             <NavBar/>
 
             <div className="projectWrap">
-                <div className="header">
-                    <h2 className="sectionTitle">PlayVessel<span>.</span></h2>
-                    <p className="date">July 2023 - October 2024</p>
+                <motion.header className="header" variants={containerVariants} initial="hidden" animate="visible">
+                    <motion.h2 className="sectionTitle" variants={cardVariants}>PlayVessel<span>.</span></motion.h2>
+                    <motion.p className="date" variants={cardVariants}>July 2023 - October 2024</motion.p>
 
-                    <p className="desc">Gaming backlog tracker. Sort games into categories to chip through the dreaded gaming backlog!</p>
+                    <motion.p className="desc" variants={cardVariants}>Gaming backlog tracker. Sort games into categories to chip through the dreaded gaming backlog!</motion.p>
 
-                    <div className="coverImg"><img src="/assets/projects/playvessel/meta-share.jpg" alt="PlayVessel Cover Image"/></div>
-                </div>
+                    <motion.div className="coverImg" variants={cardVariants}><img src="/assets/projects/playvessel/meta-share.jpg" alt="PlayVessel Cover Image" loading="lazy"/></motion.div>
+                </motion.header>
 
                 <div className="content">
                     <div className="sec">
@@ -130,94 +152,94 @@ export default function PlayVesselPage() {
 
                     <div className="sec">
                         <h3 className="title">Aftermath<span>.</span></h3>
-                        <p>After working on PlayVessel for a year now as of writing I can confidently say that it's been my <span>best work</span> that I've ever done. I <span>learned so much</span> not just in coding the thing but how to <span>manage</span> a <span>website efficiently</span> as well as <span>servers</span> and <span>CDNs</span>. While I want nothing more than for PlayVessel to be my first website to achieve my goal of making just one person's life easier, I can confidently say even it if isn't I'm proud that I created it and I'd do it again.</p>
+                        <p>After working on PlayVessel for a year now as of writing I can confidently say that it's been my <span>best work</span> that I've ever done. I <span>learned so much</span> not just through coding the thing, but how to <span>manage</span> a <span>website efficiently</span> as well as <span>servers</span> and <span>CDNs</span> and using the resources given effectively. While PlayVessel may have not been a big success, it did get some users and that's awesome. Ultimately it didn't make sense to keep running with no revenue and I ended up sunsetting it. It was a good learning project and it absolutely will lead to bigger and brighter things moving forward.</p>
                     </div>
                 </div>
 
-                <div className="mediaSec">
+                <div className="mediaSec" ref={ref}>
                     <h3 className="title">Media<span>.</span></h3>
 
-                    <div className="images">
-                        <div className="imageCard">
+                    <motion.div className="images" variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/profile.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/profile.webp" alt="Profile Home"/>
+                                <img src="/assets/projects/playvessel/profile.webp" alt="Profile Home" loading="lazy"/>
                             </div>
                             <p>Profile Home</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/profileBacklog.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/profileBacklog.webp" alt="Profile Backlog"/>
+                                <img src="/assets/projects/playvessel/profileBacklog.webp" alt="Profile Backlog" loading="lazy"/>
                             </div>
                             <p>Profile Backlog</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/gameDetail.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/gameDetail.webp" alt="Game Detail Page (IMG1)"/>
+                                <img src="/assets/projects/playvessel/gameDetail.webp" alt="Game Detail Page (IMG1)" loading="lazy"/>
                             </div>
                             <p>Game Detail Page</p>
-                        </div>
+                        </motion.div>
                         
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/gameDetail-2.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/gameDetail-2.webp" alt="Game Detail Page (IMG2)"/>
+                                <img src="/assets/projects/playvessel/gameDetail-2.webp" alt="Game Detail Page (IMG2)" loading="lazy"/>
                             </div>
                             <p>Game Detail Page (Cont.)</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/settingsHome.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/settingsHome.webp" alt="Settings Home"/>
+                                <img src="/assets/projects/playvessel/settingsHome.webp" alt="Settings Home" loading="lazy"/>
                             </div>
                             <p>Settings Home</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/settingsPrivacy.webp")}>    
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/settingsPrivacy.webp" alt="Privacy Disclosure"/>
+                                <img src="/assets/projects/playvessel/settingsPrivacy.webp" alt="Privacy Disclosure" loading="lazy"/>
                             </div>
                             <p>Privacy Disclosure</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/pvAbout.webp")}> 
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/pvAbout.webp" alt="About Page"/>
+                                <img src="/assets/projects/playvessel/pvAbout.webp" alt="About Page" loading="lazy"/>
                             </div>
                             <p>About Page</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/elp.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/elp.webp" alt="External Link Protection Page (ELP)"/>
+                                <img src="/assets/projects/playvessel/elp.webp" alt="External Link Protection Page (ELP)" loading="lazy"/>
                             </div>
                             <p>External Link Protection Page (ELP)</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/footer.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/footer.webp" alt="Footer"/>
+                                <img src="/assets/projects/playvessel/footer.webp" alt="Footer" loading="lazy"/>
                             </div>
                             <p>Footer</p>
-                        </div>
+                        </motion.div>
 
-                        <div className="imageCard">
+                        <motion.div className="imageCard" variants={cardVariants}>
                             <div className="imageWrap" onClick={() => openImageModal("/assets/projects/playvessel/statusPage.webp")}>
                                 <i className="bx bx-right-arrow-alt"/>
-                                <img src="/assets/projects/playvessel/statusPage.webp" alt="Instatus Status Page"/>
+                                <img src="/assets/projects/playvessel/statusPage.webp" alt="Instatus Status Page" loading="lazy"/>
                             </div>
                             <p>Instatus Status Page</p>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
 
                 {selectedImage && (
